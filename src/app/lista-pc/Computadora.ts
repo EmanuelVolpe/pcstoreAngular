@@ -5,5 +5,6 @@ export interface Computadora {
     precio: number;
     stock: number;
     clearance: boolean;
+    quantity: number;
 } 
   

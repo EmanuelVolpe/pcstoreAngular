@@ -17,6 +17,7 @@ export class ListaPcComponent implements OnInit {
       precio:140000,
       stock:10,
       clearance:false,
+      quantity: 0,
     },
     {
       modelo:"HP 5000", 
@@ -25,6 +26,7 @@ export class ListaPcComponent implements OnInit {
       precio:130000,
       stock:20,
       clearance:true,
+      quantity: 0,
     },
     {
       modelo:"MSI GL62", 
@@ -33,6 +35,7 @@ export class ListaPcComponent implements OnInit {
       precio:250000,
       stock:0,
       clearance:false,
+      quantity: 0,
     },
     {
       modelo:"Asus XJ 100", 
@@ -41,12 +44,27 @@ export class ListaPcComponent implements OnInit {
       precio:170000,
       stock:15,
       clearance:false,
+      quantity: 0,
     },
   ]
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  upQuantity(computadora: Computadora): void {
+    if(computadora.quantity < computadora.stock)
+    computadora.quantity++;
+  }
+
+  downQuantity(computadora: Computadora): void {
+    if(computadora.quantity > 0)
+    computadora.quantity--;
+  }
+
+  changeQuantity($event, computadora: Computadora){
+    console.log(event.target);
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Computadora } from './Computadora';
 
 @Component({
   selector: 'app-lista-pc',
@@ -7,34 +8,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaPcComponent implements OnInit {
 
-  computadora1 = {
-    "Modelo":"Acer 7200", 
-    "Procesador":"Intel i5",
-    "Memoria":8, 
-    "Precio":140000,
-    "Stock":10
-  }
-  computadora2 = {
-    "Modelo":"HP 5000", 
-    "Procesador":"Ryzen 8",
-    "Memoria":8, 
-    "Precio":130000,
-    "Stock":20
-  }
-  computadora3 = {
-    "Modelo":"MSI GL62", 
-    "Procesador":"Intel i7",
-    "Memoria":12, 
-    "Precio":250000,
-    "Stock":50
-  }
-  computadora4 = {
-    "Modelo":"Asus XJ 100", 
-    "Procesador":"Intel i5",
-    "Memoria":8, 
-    "Precio":170000,
-    "Stock":15
-  }
+  computadoras: Computadora[] = 
+  [
+    {
+      modelo:"Acer 7200", 
+      procesador:"Intel i5",
+      memoria:8, 
+      precio:140000,
+      stock:10,
+      clearance:false,
+    },
+    {
+      modelo:"HP 5000", 
+      procesador:"Ryzen 8",
+      memoria:8, 
+      precio:130000,
+      stock:20,
+      clearance:true,
+    },
+    {
+      modelo:"MSI GL62", 
+      procesador:"Intel i7",
+      memoria:12, 
+      precio:250000,
+      stock:0,
+      clearance:false,
+    },
+    {
+      modelo:"Asus XJ 100", 
+      procesador:"Intel i5",
+      memoria:8, 
+      precio:170000,
+      stock:15,
+      clearance:false,
+    },
+  ]
 
   constructor() { }
 

@@ -17,7 +17,7 @@
             <td>{{computadora.precio | currency}}</td>
             <td><span class="badge badge-warning" *ngIf="computadora.stock==0">Sin Stock</span></td>
             <td><button class="btn btn-success btn-sm" (click)="downQuantity(computadora)">-</button>
-                <input type="number" [(ngModel)]="computadora.quantity"
+                <input [(ngModel)]="computadora.quantity"
                 (keyup) = "changeQuantity($event, computadora)">
                 <button class="btn btn-success btn-sm" (click)="upQuantity(computadora)">+</button>
                 {{computadora.quantity}}

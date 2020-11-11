@@ -53,18 +53,8 @@ export class ListaPcComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  upQuantity(computadora: Computadora): void {
-    if(computadora.quantity < computadora.stock)
-    computadora.quantity++;
-  }
-
-  downQuantity(computadora: Computadora): void {
-    if(computadora.quantity > 0)
-    computadora.quantity--;
-  }
-
-  changeQuantity($event, computadora: Computadora){
-    console.log(event.target);
+  maxReached(m: string){
+    alert(m);
   }
 
 }

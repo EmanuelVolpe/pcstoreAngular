@@ -60,6 +60,8 @@ export class ListaPcComponent implements OnInit {
 
   agregaAlCarrito(computadora):void{
     this.carrito.agregaAlCarrito(computadora);
+    computadora.stock -= computadora.quantity;
+    computadora.quantity = 0;
   }
 
 }

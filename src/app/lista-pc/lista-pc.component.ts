@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarritoDeComprasService } from '../carrito-de-compras.service';
 import { Computadora } from './Computadora';
 
 @Component({
@@ -48,13 +49,17 @@ export class ListaPcComponent implements OnInit {
     },
   ]
 
-  constructor() { }
+  constructor(private carrito:CarritoDeComprasService) { }
 
   ngOnInit(): void {
   }
 
   maxReached(m: string){
     alert(m);
+  }
+
+  agregaAlCarrito(computadora):void{
+    this.carrito.agregaAlCarrito(computadora);
   }
 
 }

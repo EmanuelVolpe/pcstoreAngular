@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Computadora } from '../lista-pc/Computadora';
 
 @Component({
   selector: 'app-input-numero',
